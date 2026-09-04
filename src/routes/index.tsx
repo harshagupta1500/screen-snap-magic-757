@@ -90,7 +90,7 @@ function EarlyWarningsPage() {
         </div>
 
         {/* Filters row */}
-        <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+        <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-3">
           <span className="text-sm font-semibold">Severity</span>
           <div className="flex flex-wrap gap-2">
             {SEVERITIES.map((s) => (
@@ -135,7 +135,7 @@ function EarlyWarningsPage() {
         </div>
 
         {/* Main grid */}
-        <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1fr)_340px]">
           <WarningQueue />
           <div className="flex flex-col gap-4">
             <WarningTrendCard />

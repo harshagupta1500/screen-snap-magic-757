@@ -1,3 +1,4 @@
+// Shared status pill + risk label used across the Early Warnings dashboard.
 import { cn } from "@/lib/utils";
 
 export type Tone = "critical" | "high" | "medium" | "low" | "info" | "success";

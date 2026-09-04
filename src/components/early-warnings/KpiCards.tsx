@@ -112,7 +112,7 @@ export function KpiCards() {
               <ResponsiveContainer width="100%" height="100%">
                 {kpi.chart === "bar" ? (
                   <BarChart data={data}>
-                    <Bar dataKey="v" fill={TONE_STROKE[kpi.tone]} radius={[2, 2, 0, 0]} />
+                    <Bar dataKey="v" fill={TONE_STROKE[kpi.tone]} radius={[2, 2, 0, 0]} isAnimationActive={false} />
                   </BarChart>
                 ) : (
                   <AreaChart data={data}>
@@ -123,6 +123,7 @@ export function KpiCards() {
                       strokeWidth={1.6}
                       fill="transparent"
                       dot={false}
+                      isAnimationActive={false}
                     />
                   </AreaChart>
                 )}

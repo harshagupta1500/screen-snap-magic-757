@@ -82,6 +82,7 @@ export function EscalationTimeline() {
                   stroke="var(--critical)"
                   strokeWidth={2}
                   fill="url(#riskFill)"
+                  isAnimationActive={false}
                   dot={{ r: 4, fill: "var(--critical)", strokeWidth: 0 }}
                 >
                   <LabelList

@@ -83,6 +83,7 @@ export function WarningTrendCard() {
                 stroke={s.color}
                 strokeWidth={2}
                 dot={{ r: 3, strokeWidth: 2, fill: "var(--card)" }}
+                isAnimationActive={false}
               />
             ))}
           </LineChart>

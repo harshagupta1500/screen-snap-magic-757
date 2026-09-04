@@ -135,7 +135,7 @@ function EarlyWarningsPage() {
         </div>
 
         {/* Main grid */}
-        <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
           <WarningQueue />
           <div className="flex flex-col gap-4">
             <WarningTrendCard />

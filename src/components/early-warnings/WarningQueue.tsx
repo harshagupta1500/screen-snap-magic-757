@@ -159,14 +159,14 @@ export function WarningQueue() {
         <Info className="size-4 text-muted-foreground" />
       </header>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
+        <table className="w-full border-collapse text-[13px]">
           <thead>
             <tr className="bg-surface">
               {HEADERS.map((h, i) => (
                 <th
                   key={h}
                   className={cn(
-                    "whitespace-nowrap border-y border-border px-3 py-2.5 text-xs font-semibold text-muted-foreground",
+                    "whitespace-nowrap border-y border-border px-2 py-2.5 text-[11px] font-semibold text-muted-foreground",
                     i === 0 ? "text-left" : "text-center",
                   )}
                 >
@@ -178,7 +178,7 @@ export function WarningQueue() {
           <tbody>
             {ROWS.map((r) => (
               <tr key={r.project} className="border-b border-border last:border-0 hover:bg-surface">
-                <td className="max-w-[240px] px-3 py-3">
+                <td className="w-[190px] px-2 py-2.5">
                   <div className="flex items-start gap-2">
                     <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-md bg-surface text-muted-foreground">
                       <Building2 className="size-4" />
@@ -186,16 +186,16 @@ export function WarningQueue() {
                     <span className="font-medium text-foreground">{r.project}</span>
                   </div>
                 </td>
-                <td className="whitespace-nowrap px-3 py-3 text-center text-muted-foreground">
+                <td className="whitespace-nowrap px-2 py-2.5 text-center text-muted-foreground">
                   {r.sector}
                 </td>
-                <td className="px-3 py-3 text-center">
+                <td className="px-2 py-2.5 text-center">
                   <RiskText level={r.prev[0]} score={r.prev[1]} />
                 </td>
-                <td className="px-3 py-3 text-center">
+                <td className="px-2 py-2.5 text-center">
                   <RiskText level={r.curr[0]} score={r.curr[1]} />
                 </td>
-                <td className="px-3 py-3 text-center">
+                <td className="px-2 py-2.5 text-center">
                   <span
                     className={cn(
                       "inline-flex items-center gap-1 text-sm font-semibold",
@@ -212,7 +212,7 @@ export function WarningQueue() {
                 </td>
                 <td
                   className={cn(
-                    "px-3 py-3 text-center font-medium",
+                    "px-2 py-2.5 text-center font-medium",
                     parseInt(r.overrun) >= 15 ? "text-critical" : "text-foreground",
                   )}
                 >
@@ -220,20 +220,20 @@ export function WarningQueue() {
                 </td>
                 <td
                   className={cn(
-                    "whitespace-nowrap px-3 py-3 text-center font-medium",
+                    "whitespace-nowrap px-2 py-2.5 text-center font-medium",
                     r.delay.startsWith("+") ? "text-critical" : "text-success",
                   )}
                 >
                   {r.delay}
                 </td>
-                <td className="max-w-[150px] px-3 py-3 text-muted-foreground">{r.trigger}</td>
-                <td className="px-3 py-3 text-center">
+                <td className="w-[120px] px-2 py-2.5 text-xs text-muted-foreground">{r.trigger}</td>
+                <td className="px-2 py-2.5 text-center">
                   <Pill tone={STATUS_TONE[r.status]}>{r.status}</Pill>
                 </td>
-                <td className="whitespace-nowrap px-3 py-3 text-center text-muted-foreground">
+                <td className="whitespace-nowrap px-2 py-2.5 text-center text-muted-foreground">
                   {r.first}
                 </td>
-                <td className="px-3 py-3 text-center">
+                <td className="px-2 py-2.5 text-center">
                   <Pill tone={PRIORITY_TONE[r.priority]}>{r.priority}</Pill>
                 </td>
               </tr>

@@ -166,7 +166,7 @@ export function WarningQueue() {
                 <th
                   key={h}
                   className={cn(
-                    "whitespace-nowrap border-y border-border px-1.5 py-2.5 text-[11px] font-semibold text-muted-foreground",
+                    "whitespace-nowrap border-y border-border px-1 py-2.5 text-[11px] font-semibold text-muted-foreground",
                     i === 0 ? "text-left" : "text-center",
                   )}
                 >
@@ -178,7 +178,7 @@ export function WarningQueue() {
           <tbody>
             {ROWS.map((r) => (
               <tr key={r.project} className="border-b border-border last:border-0 hover:bg-surface">
-                <td className="w-[170px] px-2 py-2.5">
+                <td className="w-[150px] px-2 py-2.5">
                   <div className="flex items-start gap-2">
                     <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-md bg-surface text-muted-foreground">
                       <Building2 className="size-4" />
@@ -189,13 +189,13 @@ export function WarningQueue() {
                 <td className="whitespace-nowrap px-1.5 py-2.5 text-center text-xs text-muted-foreground">
                   {r.sector}
                 </td>
-                <td className="px-2 py-2.5 text-center">
+                <td className="px-1 py-2.5 text-center">
                   <RiskText level={r.prev[0]} score={r.prev[1]} />
                 </td>
-                <td className="px-2 py-2.5 text-center">
+                <td className="px-1 py-2.5 text-center">
                   <RiskText level={r.curr[0]} score={r.curr[1]} />
                 </td>
-                <td className="px-2 py-2.5 text-center">
+                <td className="px-1 py-2.5 text-center">
                   <span
                     className={cn(
                       "inline-flex items-center gap-1 text-sm font-semibold",
@@ -226,14 +226,14 @@ export function WarningQueue() {
                 >
                   {r.delay}
                 </td>
-                <td className="w-[110px] px-1.5 py-2.5 text-[11px] leading-snug text-muted-foreground">{r.trigger}</td>
-                <td className="px-2 py-2.5 text-center">
+                <td className="w-[100px] px-1.5 py-2.5 text-[11px] leading-snug text-muted-foreground">{r.trigger}</td>
+                <td className="px-1 py-2.5 text-center">
                   <Pill tone={STATUS_TONE[r.status]}>{r.status}</Pill>
                 </td>
                 <td className="whitespace-nowrap px-1.5 py-2.5 text-center text-xs text-muted-foreground">
                   {r.first}
                 </td>
-                <td className="px-2 py-2.5 text-center">
+                <td className="px-1 py-2.5 text-center">
                   <Pill tone={PRIORITY_TONE[r.priority]}>{r.priority}</Pill>
                 </td>
               </tr>
